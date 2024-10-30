@@ -26,7 +26,7 @@ pipeline:
                     connectorRef: Docker_Quickstart
                     image: maven:latest
                     shell: Sh
-                    command: mvn cean install
+                    command: mvn -B -DskipTests clean package
                   timeout: ""
                   type: Run
           platform:
