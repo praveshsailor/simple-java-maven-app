@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_praveshsailor_simple_java_maven_app_1730259727336-pr-trigger-input-set
+  identifier: Build_praveshsailor_simple_java_maven_app_1730259727336prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: My
+  pipeline:
+    identifier: Build_praveshsailor_simple_java_maven_app_1730259727336
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
