@@ -21,15 +21,18 @@ pipeline:
             steps:
               - step:
                   identifier: echo
-                  name: echo
+                  name: maven build
                   spec:
-                    command: echo hello world
+                    connectorRef: Docker_Quickstart
+                    image: maven:latest
+                    shell: Sh
+                    command: mvn cean install
                   timeout: ""
                   type: Run
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
